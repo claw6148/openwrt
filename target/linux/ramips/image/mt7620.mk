@@ -650,6 +650,18 @@ define Device/tplink_c20-v1
 endef
 TARGET_DEVICES += tplink_c20-v1
 
+define Device/mer1200g-v1
+  $(Device/Archer)
+  DTS := MER1200Gv1
+  TPLINK_FLASHLAYOUT := 16Mmtk
+  TPLINK_HWID := 0x0
+  TPLINK_HWREV := 0x0
+  TPLINK_HWREVADD := 0x0
+  DEVICE_TITLE := Mercury MER1200G v1
+  DEVICE_PACKAGES := kmod-mt76x2 kmod-switch-rtl8367s
+endef
+TARGET_DEVICES += mer1200g-v1
+
 define Device/vonets_var11n-300
   DTS := VAR11N-300
   IMAGE_SIZE := $(ralink_default_fw_size_4M)
