@@ -416,3 +416,11 @@ define Device/tplink_tl-wr2543-v1
   SUPPORTED_DEVICES += tl-wr2543n
 endef
 TARGET_DEVICES += tplink_tl-wr2543-v1
+
+define Device/mercury_mw150r-v10
+  $(Device/tplink-8mlzma)
+  ATH_SOC := ar9331
+  DEVICE_TITLE := Mercury MW150R v10
+  TPLINK_HWID := 0x0
+endef
+TARGET_DEVICES += mercury_mw150r-v10
